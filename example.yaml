@@ -1,0 +1,7 @@
+apiVersion: validation.bug/v1
+kind: Foo
+metadata:
+  name: foo1
+spec:
+  thing:
+    field: "foo"

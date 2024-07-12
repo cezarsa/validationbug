@@ -1,4 +1,4 @@
-// +groupName=validationbug
+// +groupName=validation.bug
 package v1
 
 import (
@@ -15,11 +15,11 @@ type Foo struct {
 }
 
 type FooSpec struct {
-	// +kubebuilder:validation:XValidation:rule="size(self.field) > 2",message="validation 1"
+	// +kubebuilder:validation:XValidation:rule="true",message="validation 2"
 	Thing Thing `json:"thing"`
 }
 
-// +kubebuilder:validation:XValidation:rule="has(self.field)",message="validation 2"
+// +kubebuilder:validation:XValidation:rule="true",message="validation 1"
 type Thing struct {
 	Field *string `json:"field"`
 }
